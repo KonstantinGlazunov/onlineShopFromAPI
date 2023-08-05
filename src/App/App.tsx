@@ -9,7 +9,8 @@ function App() {
   return (
     
     <Routes>
-    <Route path='/:id' element={<Products />}/>
+      <Route path="/" element={<Products />} />
+            <Route path='p/:id' element={<Products />}/>
     </Routes>
   );
 }
