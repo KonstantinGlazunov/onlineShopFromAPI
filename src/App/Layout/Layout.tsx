@@ -1,12 +1,12 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import Products from '../Products/Products'
+import NavBar from '../NavBar/NavBar'
 
 export default function Layout():JSX.Element {
   return (
     <>
     <div>Layout</div>
-
+    <NavBar />
     <Outlet />    
     </>
 

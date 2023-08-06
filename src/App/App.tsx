@@ -4,14 +4,15 @@ import Products from './Products/Products';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout/Layout';
 
-function App() {
+function App():JSX.Element {
 
-  Products();
+  
   return (
     
     <Routes>
-      <Route path="/" element={<Layout />} />
-            <Route path='p/:id' element={<Products />}/>
+      <Route path='/' element={<Layout />} />
+            <Route path='/p/' element={<Products />}/>
+            <Route path='/p/:index' element={<Products />}/>
     </Routes>
   );
 }

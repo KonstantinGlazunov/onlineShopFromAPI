@@ -1,5 +1,6 @@
 import React from "react";
 import { ProductInt } from "../Products/Products";
+import styles  from "./ProductCard.module.css"
 
 
 interface Props {
@@ -8,17 +9,22 @@ index:number
 }
 
 export default function ProductsCard({products, index}: Props): JSX.Element {
-  //console.log("TITLE= "+ products[index].title);
- // console.log("products[index]" + products[index]);
-  
-    return (
+if (index <= products.length-1){
+  return (
     <div>
-      <h2>Products Card</h2>
-<ul>
-    <li>
-     {/* {products[index].title} */}
-    </li>
-</ul>
+      <h2>{products[index].title}</h2>
+      <img className= {styles.image} src = {products[index].image} alt={products[index].title}/> 
+      
+      
+
+      <ul>
+    <li> {products[index].description} </li>
+     <h2>{products[index].price}'$'</h2>
+      </ul>
+
     </div>
   );
+} else {
+  return (<>Server Array/JSON  Error  </>)
+}
 }
